@@ -1,4 +1,8 @@
-## Description
+## Description :
 This is  hospital Api for doctors of hospital where doctor can register them self then register there patients and create report of there patients after checkup.
-## Tech Stack 
+## Tech Stack :
  Node.Js and Mongo DB
+## Take a Look  :
+The api is hosted : [here]https://hospitalapiv1.herokuapp.com/
+## Documentation :
+for testing this api please go through the Documentation [link]https://documenter.getpostman.com/view/18917188/UyrAEwkh
