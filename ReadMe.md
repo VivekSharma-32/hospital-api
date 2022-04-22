@@ -5,5 +5,5 @@ This is  hospital Api for doctors of hospital where doctor can register them sel
 ## Take a Look  :
 The api is hosted : [here](https://hospitalapiv1.herokuapp.com/)
 ## Documentation :
-for testing this api please go through the : [Documentation] (https://documenter.getpostman.com/view/18917188/UyrAEwkh)
+for testing this api please go through the : [Documentation](https://documenter.getpostman.com/view/18917188/UyrAEwkh)
  

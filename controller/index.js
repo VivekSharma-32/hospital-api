@@ -1,8 +1,10 @@
 const Doctor = require('../models/doctor');
 const jwt = require('jsonwebtoken');
-module.exports.home = async function(req , res){
+// this is welcome router function
+module.exports.home = async function (req, res) {
     return res.send("<h1>welcome to hospital api || </h1>");
 }
+// this is register function
 module.exports.Register = async function (req, res) {
     try {
         let doctorPresent = await Doctor.find({ email: req.body.email });
@@ -11,7 +13,7 @@ module.exports.Register = async function (req, res) {
             doctorPresent = new Doctor(req.body);
             doctorRegister = await doctorPresent.save();
         }
-        return res.json(200, {
+        return res.send(200).json({
             message: "Doctor Register!!",
             doctor: doctorRegister
         })

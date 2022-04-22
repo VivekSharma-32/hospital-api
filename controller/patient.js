@@ -9,7 +9,7 @@ module.exports.register = async function (req, res) {
         } else {
             checkpatient = new Patient(req.body);
             let addPatient = await checkpatient.save();
-            let pat = jwt.sign(addPatient , id);
+            let pat = jwt.sign(addPatient, id);
             return res.send(addPatient);
         }
     } catch (error) {

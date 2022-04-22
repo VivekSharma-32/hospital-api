@@ -5,11 +5,11 @@ const Doctor = require('./models/doctor');
 const app = express();
 app.use(express.urlencoded());
 app.use(express.json());
-app.use('/' ,require('./router/index'));
-app.listen(port , (error)=>{
-    if(error){
+app.use('/', require('./router/index'));
+app.listen(port, (error) => {
+    if (error) {
         console.log(error);
-    }else{
+    } else {
         console.log("Server is running");
     }
 });
