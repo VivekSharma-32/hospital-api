@@ -6,11 +6,12 @@ const doctor = new mongoose.Schema({
     },
     email: {
         type: String,
-        require: true
+        require: true,
+        
     },
     password: {
         type: String,
-        require: true
+        require: true,
     }
 }, { timestamps: true });
 
