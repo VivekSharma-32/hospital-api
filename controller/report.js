@@ -24,6 +24,7 @@ module.exports.allReport = async function (req, res) {
     return res.send("error");
   }
 };
+
 //search on status
 module.exports.status = async function (req, res) {
   try {

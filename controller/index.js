@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 module.exports.home = async function (req, res) {
   return res.send("<h1>welcome to hospital api || </h1>");
 };
+
 // this is register function
 module.exports.Register = async function (req, res) {
   try {
