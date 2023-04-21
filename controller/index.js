@@ -1,4 +1,4 @@
-const Doctor = require("../models/doctor");
+const DoctorModel = require("../models/doctor");
 const jwt = require("jsonwebtoken");
 // this is welcome router function
 module.exports.home = async function (req, res) {
@@ -7,7 +7,7 @@ module.exports.home = async function (req, res) {
 // this is register function
 module.exports.Register = async function (req, res) {
   try {
-    let doctorPresent = await Doctor.find({ email: req.body.email });
+    let doctorPresent = await DoctorModel.find({ email: req.body.email });
     let doctorRegister = doctorPresent;
     if (doctorPresent.length == 0) {
       doctorPresent = new Doctor(req.body);
@@ -24,10 +24,10 @@ module.exports.Register = async function (req, res) {
 
 module.exports.Login = async function token(req, res) {
   try {
-    const checkDoctor = await Doctor.findOne({ email: req.body.email });
+    const checkDoctor = await DoctorModel.findOne({ email: req.body.email });
     if (checkDoctor) {
       let token = jwt.sign(checkDoctor.toJSON(), process.env.JWT_SECRET, {
-        expiresIn: 6000 * 6000,
+        expiresIn: "1d",
       });
       return res.json(200, {
         message: "Login SuccessFully !!",
